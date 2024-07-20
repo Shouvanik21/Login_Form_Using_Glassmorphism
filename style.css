@@ -1,0 +1,174 @@
+@import url("'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.root{
+    --text-dark:#171717;
+    --text-white:#e5e5e5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    background-image: url("img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form{
+    width: 100%;
+    max-width: 430px;
+    margin: 1rem;
+    padding: 4rem 3rem;
+    border: 2px solid white;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: show 0.5s linear forwards;
+}
+
+@keyframes show {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }    
+}
+
+h1{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.form1{
+    margin-bottom: 1.5rem;
+    padding-block: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid white;
+}
+
+.subform1{
+    flex: 1;
+    position: relative;
+    isolation: isolate;
+}
+
+.form1 span{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.subform1 label{
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.subform1 input:not(:placeholder-shown)~label,
+.subform1 input:focus~label{
+    font-size: 0.7rem;
+    top: -1.25rem;
+}
+
+.subform1 input{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    background-color: transparent;
+}
+
+#passeye{
+    cursor: pointer;
+}
+
+.form2{
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.left label{
+    font-size: 0.9rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="checkbox"]{
+    outline-color: white;
+    border-color: white;
+    accent-color: white;
+    color: var(--text-dark);
+}
+
+.left label:hover{
+    color: white;
+}
+
+.right{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.right:hover{
+    color:white;
+}
+
+.buttonlogin{
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttonlogin:hover{
+    background-color: var(--text-light);
+}
+
+.form4{
+    color: var(--text-light);
+    text-align: center;
+}
+
+.form4 a{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
